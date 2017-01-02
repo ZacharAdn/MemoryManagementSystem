@@ -106,17 +106,17 @@ CMakeFiles/cppEx2.dir/MemPool.cpp.o.provides.build: CMakeFiles/cppEx2.dir/MemPoo
 
 
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: CMakeFiles/cppEx2.dir/flags.make
-CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: MemoryManager.cpp
+CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MemoryManager.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cppEx2.dir/MemoryManager.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppEx2.dir/MemoryManager.cpp.o -c /home/zahar/ClionProjects/cppEx2/cmake-build-debug/MemoryManager.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppEx2.dir/MemoryManager.cpp.o -c /home/zahar/ClionProjects/cppEx2/MemoryManager.cpp
 
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppEx2.dir/MemoryManager.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zahar/ClionProjects/cppEx2/cmake-build-debug/MemoryManager.cpp > CMakeFiles/cppEx2.dir/MemoryManager.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zahar/ClionProjects/cppEx2/MemoryManager.cpp > CMakeFiles/cppEx2.dir/MemoryManager.cpp.i
 
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppEx2.dir/MemoryManager.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zahar/ClionProjects/cppEx2/cmake-build-debug/MemoryManager.cpp -o CMakeFiles/cppEx2.dir/MemoryManager.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zahar/ClionProjects/cppEx2/MemoryManager.cpp -o CMakeFiles/cppEx2.dir/MemoryManager.cpp.s
 
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o.requires:
 
