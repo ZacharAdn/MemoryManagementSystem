@@ -150,6 +150,33 @@ MemPool.cpp.s:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemPool.cpp.s
 .PHONY : MemPool.cpp.s
 
+MemoryManager.o: MemoryManager.cpp.o
+
+.PHONY : MemoryManager.o
+
+# target to build an object file
+MemoryManager.cpp.o:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemoryManager.cpp.o
+.PHONY : MemoryManager.cpp.o
+
+MemoryManager.i: MemoryManager.cpp.i
+
+.PHONY : MemoryManager.i
+
+# target to preprocess a source file
+MemoryManager.cpp.i:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemoryManager.cpp.i
+.PHONY : MemoryManager.cpp.i
+
+MemoryManager.s: MemoryManager.cpp.s
+
+.PHONY : MemoryManager.s
+
+# target to generate assembly for a file
+MemoryManager.cpp.s:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemoryManager.cpp.s
+.PHONY : MemoryManager.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... MemPool.o"
 	@echo "... MemPool.i"
 	@echo "... MemPool.s"
+	@echo "... MemoryManager.o"
+	@echo "... MemoryManager.i"
+	@echo "... MemoryManager.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

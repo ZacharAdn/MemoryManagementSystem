@@ -90,6 +90,12 @@
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/MemPool.h">
 			<Option target="cppEx2"/>
 		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/cmake-build-debug/MemoryManager.cpp">
+			<Option target="cppEx2"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/cmake-build-debug/MemoryManager.h">
+			<Option target="cppEx2"/>
+		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/main.cpp">
 			<Option target="cppEx2"/>
 		</Unit>
