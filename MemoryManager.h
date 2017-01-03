@@ -6,7 +6,19 @@
 #define CPPEX2_MEMORYMANAGER_H
 
 
+#include <cstddef>
 class MemoryManager {
+public:
+    MemoryManager();
+
+    virtual ~MemoryManager();
+
+private:
+
+    void* allocate(size_t);
+    void   free(void*);
+
+
 
 };
 

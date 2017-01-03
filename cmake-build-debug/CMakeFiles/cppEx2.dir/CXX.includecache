@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/zahar/ClionProjects/cppEx2/main.cpp
-iostream
+/home/zahar/ClionProjects/cppEx2/MemPool.cpp
+MemPool.h
+/home/zahar/ClionProjects/cppEx2/MemPool.h
+
+/home/zahar/ClionProjects/cppEx2/MemPool.h
+cstdio
 -
+zconf.h
+-
+
+/home/zahar/ClionProjects/cppEx2/MemoryManager.cpp
+MemoryManager.h
+/home/zahar/ClionProjects/cppEx2/MemoryManager.h
+
+/home/zahar/ClionProjects/cppEx2/MemoryManager.h
+
+/home/zahar/ClionProjects/cppEx2/main.cpp
 
