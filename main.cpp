@@ -10,22 +10,26 @@ using namespace std;
 
 int main() {
 
-//    void* m= sbrk(0);
-
-    //int heapSize = 5;
-//    MemPool& pool = MemPool::getInstane(5);
-//
-//    map<int, std::list<freeblock>> pooli = pool.getMemoryLists();
-
     MemoryManager mm(1000);
 
-    int g [10]; // = new int[10];
+    int g [20]; // = new int[10];
 
     int * gt= new int[10];
 
 
+    int t = 5;
+
     delete[] g;
 
+//
+//    static std::map<void*,int> associativeArray ; //=  (std::map<void*,int> *) malloc(10000);//new std::map<void*,int> ();
+//
+//    void* ptr ;
+//
+//
+//    associativeArray.insert(std::pair<void*,int>(ptr,6));
+//
+//    cout << associativeArray.at(ptr);
 
     return 0;
 }

@@ -204,6 +204,33 @@ MemoryManager.cpp.s:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemoryManager.cpp.s
 .PHONY : MemoryManager.cpp.s
 
+MyAllocator.o: MyAllocator.cpp.o
+
+.PHONY : MyAllocator.o
+
+# target to build an object file
+MyAllocator.cpp.o:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MyAllocator.cpp.o
+.PHONY : MyAllocator.cpp.o
+
+MyAllocator.i: MyAllocator.cpp.i
+
+.PHONY : MyAllocator.i
+
+# target to preprocess a source file
+MyAllocator.cpp.i:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MyAllocator.cpp.i
+.PHONY : MyAllocator.cpp.i
+
+MyAllocator.s: MyAllocator.cpp.s
+
+.PHONY : MyAllocator.s
+
+# target to generate assembly for a file
+MyAllocator.cpp.s:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MyAllocator.cpp.s
+.PHONY : MyAllocator.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -249,6 +276,9 @@ help:
 	@echo "... MemoryManager.o"
 	@echo "... MemoryManager.i"
 	@echo "... MemoryManager.s"
+	@echo "... MyAllocator.o"
+	@echo "... MyAllocator.i"
+	@echo "... MyAllocator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

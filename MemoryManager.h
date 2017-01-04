@@ -34,6 +34,7 @@ public:
 
 private:
     std::map<int, std::list<freeblock>> *freeLists;
+    static std::map<void*,int> associativeArray;
     MemPool *pool ;
     size_t heapSize;
 

@@ -9,6 +9,10 @@ CMakeFiles/cppEx2.dir/MemPool.cpp.o: ../MemPool.h
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MemPool.h
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MemoryManager.cpp
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MemoryManager.h
+CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MyAllocator.h
+
+CMakeFiles/cppEx2.dir/MyAllocator.cpp.o: ../MyAllocator.cpp
+CMakeFiles/cppEx2.dir/MyAllocator.cpp.o: ../MyAllocator.h
 
 CMakeFiles/cppEx2.dir/main.cpp.o: ../MemPool.h
 CMakeFiles/cppEx2.dir/main.cpp.o: ../MemoryManager.h

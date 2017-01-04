@@ -10,6 +10,10 @@ CMakeFiles/cppEx2.dir/MemoryManager.cpp.o
  /home/zahar/ClionProjects/cppEx2/MemPool.h
  /home/zahar/ClionProjects/cppEx2/MemoryManager.cpp
  /home/zahar/ClionProjects/cppEx2/MemoryManager.h
+ /home/zahar/ClionProjects/cppEx2/MyAllocator.h
+CMakeFiles/cppEx2.dir/MyAllocator.cpp.o
+ /home/zahar/ClionProjects/cppEx2/MyAllocator.cpp
+ /home/zahar/ClionProjects/cppEx2/MyAllocator.h
 CMakeFiles/cppEx2.dir/main.cpp.o
  /home/zahar/ClionProjects/cppEx2/MemPool.h
  /home/zahar/ClionProjects/cppEx2/MemoryManager.h

@@ -31,12 +31,28 @@ math.h
 /home/zahar/ClionProjects/cppEx2/math.h
 MemPool.h
 /home/zahar/ClionProjects/cppEx2/MemPool.h
+MyAllocator.h
+/home/zahar/ClionProjects/cppEx2/MyAllocator.h
 
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
 cstddef
 -
 MemPool.h
 /home/zahar/ClionProjects/cppEx2/MemPool.h
+
+/home/zahar/ClionProjects/cppEx2/MyAllocator.cpp
+MyAllocator.h
+/home/zahar/ClionProjects/cppEx2/MyAllocator.h
+
+/home/zahar/ClionProjects/cppEx2/MyAllocator.h
+memory
+-
+cstdlib
+-
+iostream
+-
+limits
+-
 
 /home/zahar/ClionProjects/cppEx2/Operators.h
 MemoryManager.h

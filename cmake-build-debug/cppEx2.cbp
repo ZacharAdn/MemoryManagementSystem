@@ -102,6 +102,12 @@
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/MemoryManager.h">
 			<Option target="cppEx2"/>
 		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/MyAllocator.cpp">
+			<Option target="cppEx2"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/MyAllocator.h">
+			<Option target="cppEx2"/>
+		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/Operators.h">
 			<Option target="cppEx2"/>
 		</Unit>
