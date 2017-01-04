@@ -13,9 +13,11 @@
 
 using namespace std;
 
+
+
 class MemPool {
 public:
-    static MemPool& getInstane(int heapSize) {
+    static MemPool& getInstane(size_t heapSize) {
         static MemPool instance(heapSize);
         return instance;
     }
@@ -24,21 +26,23 @@ public:
     MemPool(MemPool const&) = delete;
     void operator=(MemPool const&) = delete;
 
-private:
-
-    std::map<int, std::list<freeblock>> memoryLists;
-
-    struct freeblock{
-        struct freeblock *next;
-        size_t size;
-    };
-
-    MemPool() {}
-
-    MemPool(int heapSize) {
-        char* HEAP = new char[heapSize];
-        memoryLists = map<int, std::list<freeblock>>();
+    void* getNextFreeLocationPtr(size_t size){
+        this->currentFreeLocation_ptr = this->nextFreeLocation_ptr;
+        this->nextFreeLocation_ptr = nextFreeLocation_ptr  + size;
+        return this->currentFreeLocation_ptr;
     }
+
+
+private:
+    MemPool() {}
+    void* nextFreeLocation_ptr;
+    void* currentFreeLocation_ptr;
+    MemPool(size_t heapSize) {
+        char* myHeap;
+        myHeap = (char*)malloc(heapSize);
+        nextFreeLocation_ptr = myHeap;
+    }
+
 };
 
 

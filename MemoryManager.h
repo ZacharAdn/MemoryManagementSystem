@@ -7,18 +7,35 @@
 
 
 #include <cstddef>
+#include "MemPool.h"
+//#include "Operators.h"
+
+struct freeblock{
+    struct freeblock *next;
+    size_t size;
+};
+
 class MemoryManager {
 public:
     MemoryManager();
 
+    size_t getHeapSize() const;
+
+    MemoryManager(size_t heapSize);
+
     virtual ~MemoryManager();
 
-private:
 
     void* allocate(size_t);
     void   free(void*);
 
 
+
+
+private:
+    std::map<int, std::list<freeblock>> *freeLists;
+    MemPool *pool ;
+    size_t heapSize;
 
 };
 

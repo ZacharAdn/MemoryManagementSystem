@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/zahar/ClionProjects/cppEx2/BlockList.cpp" "/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles/cppEx2.dir/BlockList.cpp.o"
   "/home/zahar/ClionProjects/cppEx2/MemPool.cpp" "/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles/cppEx2.dir/MemPool.cpp.o"
   "/home/zahar/ClionProjects/cppEx2/MemoryManager.cpp" "/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles/cppEx2.dir/MemoryManager.cpp.o"
   "/home/zahar/ClionProjects/cppEx2/main.cpp" "/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles/cppEx2.dir/main.cpp.o"

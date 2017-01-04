@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/BlockList.cpp">
+			<Option target="cppEx2"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/BlockList.h">
+			<Option target="cppEx2"/>
+		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/MemPool.cpp">
 			<Option target="cppEx2"/>
 		</Unit>
@@ -94,6 +100,9 @@
 			<Option target="cppEx2"/>
 		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/MemoryManager.h">
+			<Option target="cppEx2"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/Operators.h">
 			<Option target="cppEx2"/>
 		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/main.cpp">

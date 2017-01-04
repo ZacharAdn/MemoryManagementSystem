@@ -3,5 +3,5 @@ project(cppEx2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp MemPool.cpp MemPool.h MemoryManager.cpp MemoryManager.h)
+set(SOURCE_FILES main.cpp MemPool.cpp MemPool.h MemoryManager.cpp MemoryManager.h BlockList.cpp BlockList.h Operators.h)
 add_executable(cppEx2 ${SOURCE_FILES})

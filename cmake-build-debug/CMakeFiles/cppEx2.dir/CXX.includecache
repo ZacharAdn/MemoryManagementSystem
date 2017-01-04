@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/zahar/ClionProjects/cppEx2/BlockList.cpp
+
 /home/zahar/ClionProjects/cppEx2/MemPool.cpp
 MemPool.h
 /home/zahar/ClionProjects/cppEx2/MemPool.h
@@ -15,12 +17,42 @@ cstdio
 -
 zconf.h
 -
+map
+-
+list
+-
 
 /home/zahar/ClionProjects/cppEx2/MemoryManager.cpp
+iostream
+-
+MemoryManager.h
+/home/zahar/ClionProjects/cppEx2/MemoryManager.h
+math.h
+/home/zahar/ClionProjects/cppEx2/math.h
+MemPool.h
+/home/zahar/ClionProjects/cppEx2/MemPool.h
+
+/home/zahar/ClionProjects/cppEx2/MemoryManager.h
+cstddef
+-
+MemPool.h
+/home/zahar/ClionProjects/cppEx2/MemPool.h
+
+/home/zahar/ClionProjects/cppEx2/Operators.h
 MemoryManager.h
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
 
-/home/zahar/ClionProjects/cppEx2/MemoryManager.h
-
 /home/zahar/ClionProjects/cppEx2/main.cpp
+iostream
+-
+zconf.h
+-
+string
+-
+MemoryManager.h
+/home/zahar/ClionProjects/cppEx2/MemoryManager.h
+MemPool.h
+/home/zahar/ClionProjects/cppEx2/MemPool.h
+Operators.h
+/home/zahar/ClionProjects/cppEx2/Operators.h
 

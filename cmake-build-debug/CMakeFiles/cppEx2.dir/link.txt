@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/cppEx2.dir/main.cpp.o CMakeFiles/cppEx2.dir/MemPool.cpp.o CMakeFiles/cppEx2.dir/MemoryManager.cpp.o  -o cppEx2 
+/usr/bin/c++   -g   CMakeFiles/cppEx2.dir/main.cpp.o CMakeFiles/cppEx2.dir/MemPool.cpp.o CMakeFiles/cppEx2.dir/MemoryManager.cpp.o CMakeFiles/cppEx2.dir/BlockList.cpp.o  -o cppEx2 

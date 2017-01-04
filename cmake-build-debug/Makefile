@@ -123,6 +123,33 @@ cppEx2/fast:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/build
 .PHONY : cppEx2/fast
 
+BlockList.o: BlockList.cpp.o
+
+.PHONY : BlockList.o
+
+# target to build an object file
+BlockList.cpp.o:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/BlockList.cpp.o
+.PHONY : BlockList.cpp.o
+
+BlockList.i: BlockList.cpp.i
+
+.PHONY : BlockList.i
+
+# target to preprocess a source file
+BlockList.cpp.i:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/BlockList.cpp.i
+.PHONY : BlockList.cpp.i
+
+BlockList.s: BlockList.cpp.s
+
+.PHONY : BlockList.s
+
+# target to generate assembly for a file
+BlockList.cpp.s:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/BlockList.cpp.s
+.PHONY : BlockList.cpp.s
+
 MemPool.o: MemPool.cpp.o
 
 .PHONY : MemPool.o
@@ -213,6 +240,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cppEx2"
+	@echo "... BlockList.o"
+	@echo "... BlockList.i"
+	@echo "... BlockList.s"
 	@echo "... MemPool.o"
 	@echo "... MemPool.i"
 	@echo "... MemPool.s"
