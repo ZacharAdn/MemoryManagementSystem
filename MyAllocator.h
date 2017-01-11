@@ -10,78 +10,54 @@
 #include<iostream>
 #include <limits>
 
-//namespace mystd {
+namespace mystd {
 
-    template<typename T>
-    class MyAllocator{
-    public :
-        //    typedefs
-
+    template <class T>
+    struct allocator {
+        typedef size_t size_type;
+        typedef ptrdiff_t difference_type;
+        typedef T* pointer;
+        typedef const T* const_pointer;
+        typedef T& reference;
+        typedef const T& const_reference;
         typedef T value_type;
-        typedef value_type* pointer;
-        typedef const value_type* const_pointer;
-        typedef value_type& reference;
-        typedef const value_type& const_reference;
-        typedef std::size_t size_type;
-        typedef std::ptrdiff_t difference_type;
 
-    public :
-        //    convert an allocator<T> to allocator<U>
+        template <class U> struct rebind { typedef allocator<U> other; };
+        allocator() throw() {}
+        allocator(const allocator&) throw() {}
 
-        template<typename U>
-        struct rebind {
-            typedef MyAllocator<U> other;
-        };
+        template <class U> allocator(const allocator<U>&) throw(){}
 
-    public :
-        inline explicit MyAllocator() {}
-        inline ~MyAllocator() {}
-        inline explicit MyAllocator(MyAllocator const&) {}
-        template<typename U>
-        inline explicit MyAllocator(MyAllocator<U> const&) {}
+        ~allocator() throw() {}
 
-        //    address
+        pointer address(reference x) const { return &x; }
+        const_pointer address(const_reference x) const { return &x; }
 
-        inline pointer address(reference r) { return &r; }
-        inline const_pointer address(const_reference r) { return &r; }
-
-        //    memory allocation
-
-        inline pointer allocate(size_type cnt,
-                                typename std::allocator<void>::const_pointer = 0) {
-            std::cout<<"Trying to allocate "<<cnt<<" objects in memory"<<std::endl;
-            pointer new_memory = reinterpret_cast<pointer>(malloc(cnt * sizeof (T)));
-            std::cout<<"Allocated "<<cnt<<" objects in memory at location:"<<new_memory<<std::endl;
-            return new_memory;
+        pointer allocate(size_type s, void const * = 0) {
+            if (0 == s)
+                return NULL;
+            pointer temp = (pointer)malloc(s * sizeof(T));
+            if (temp == NULL)
+                throw std::bad_alloc();
+            return temp;
         }
-        inline void deallocate(pointer p, size_type n) {
+
+        void deallocate(pointer p, size_type) {
             free(p);
-            std::cout<<"Deleted "<<n<<" objects from memory"<<std::endl;
-        }
-        //    size
-        inline size_type max_size() const {
-            return std::numeric_limits<size_type>::max() / sizeof(T);
         }
 
-        //    construction/destruction
-
-        inline void construct(pointer p, const T& t) {
-            std::cout<<"Constructing at memory location:" <<p<<std::endl;
-            new(p) T(t);
+        size_type max_size() const throw() {
+            return std::numeric_limits<size_t>::max() / sizeof(T);
         }
-        inline void destroy(pointer p) {
-            std::cout<<"Destroying object at memory location:" <<p<<std::endl;
+
+        void construct(pointer p, const T& val) {
+            new((void *)p) T(val);
+        }
+
+        void destroy(pointer p) {
             p->~T();
         }
+    };
 
-        inline bool operator==(MyAllocator const&) { return true; }
-        inline bool operator!=(MyAllocator const& a) { return !operator==(a); }
-    };    //    end of class MyAllocator
-//} // end of namespace mystd
-
-
-
-//};
-
-
+}
 #endif //CPPEX2_MYALLOCATOR_H

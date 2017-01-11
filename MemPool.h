@@ -27,20 +27,28 @@ public:
     void operator=(MemPool const&) = delete;
 
     void* getNextFreeLocationPtr(size_t size){
-        this->currentFreeLocation_ptr = this->nextFreeLocation_ptr;
-        this->nextFreeLocation_ptr = nextFreeLocation_ptr  + size;
-        return this->currentFreeLocation_ptr;
+        if(this->availableSize < size){
+            return nullptr;
+        }
+        availableSize = availableSize - size;
+        this->currentFreeLocation_ptr = this->currentFreeLocation_ptr +size;//this->nextFreeLocation_ptr;
+//        this->nextFreeLocation_ptr = nextFreeLocation_ptr  + size;
+        return (void*)(&myHeap[this->currentFreeLocation_ptr-size]);
     }
 
 
 private:
     MemPool() {}
-    void* nextFreeLocation_ptr;
-    void* currentFreeLocation_ptr;
+//    void* nextFreeLocation_ptr;
+    size_t currentFreeLocation_ptr;
+    size_t availableSize ;
+    char* myHeap;
+
     MemPool(size_t heapSize) {
-        char* myHeap;
+        availableSize =heapSize;
         myHeap = (char*)malloc(heapSize);
-        nextFreeLocation_ptr = myHeap;
+        this->currentFreeLocation_ptr = 0;
+//        nextFreeLocation_ptr = myHeap;
     }
 
 };

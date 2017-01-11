@@ -31,7 +31,7 @@ fabric.properties
  *.iml
  modules.xml
  *.ipr
-
+itzik/*
 .idea/*
 cmake-build-debug/CMakeFiles/CMakeTmp/
 ibm/*

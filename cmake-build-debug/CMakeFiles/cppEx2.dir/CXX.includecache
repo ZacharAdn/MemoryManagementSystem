@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/zahar/ClionProjects/cppEx2/BlockList.cpp
-
 /home/zahar/ClionProjects/cppEx2/MemPool.cpp
 MemPool.h
 /home/zahar/ClionProjects/cppEx2/MemPool.h
@@ -37,12 +35,14 @@ MyAllocator.h
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
 cstddef
 -
+vector
+-
 MemPool.h
 /home/zahar/ClionProjects/cppEx2/MemPool.h
-
-/home/zahar/ClionProjects/cppEx2/MyAllocator.cpp
 MyAllocator.h
 /home/zahar/ClionProjects/cppEx2/MyAllocator.h
+freeblock.h
+/home/zahar/ClionProjects/cppEx2/freeblock.h
 
 /home/zahar/ClionProjects/cppEx2/MyAllocator.h
 memory
@@ -57,6 +57,14 @@ limits
 /home/zahar/ClionProjects/cppEx2/Operators.h
 MemoryManager.h
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
+
+/home/zahar/ClionProjects/cppEx2/freeblock.cpp
+cstdio
+-
+freeblock.h
+/home/zahar/ClionProjects/cppEx2/freeblock.h
+
+/home/zahar/ClionProjects/cppEx2/freeblock.h
 
 /home/zahar/ClionProjects/cppEx2/main.cpp
 iostream

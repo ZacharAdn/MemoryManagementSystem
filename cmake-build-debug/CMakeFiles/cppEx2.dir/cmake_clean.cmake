@@ -2,8 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/cppEx2.dir/main.cpp.o"
   "CMakeFiles/cppEx2.dir/MemPool.cpp.o"
   "CMakeFiles/cppEx2.dir/MemoryManager.cpp.o"
-  "CMakeFiles/cppEx2.dir/BlockList.cpp.o"
-  "CMakeFiles/cppEx2.dir/MyAllocator.cpp.o"
+  "CMakeFiles/cppEx2.dir/freeblock.cpp.o"
   "cppEx2.pdb"
   "cppEx2"
 )

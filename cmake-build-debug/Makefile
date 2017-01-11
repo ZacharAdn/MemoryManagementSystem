@@ -123,33 +123,6 @@ cppEx2/fast:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/build
 .PHONY : cppEx2/fast
 
-BlockList.o: BlockList.cpp.o
-
-.PHONY : BlockList.o
-
-# target to build an object file
-BlockList.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/BlockList.cpp.o
-.PHONY : BlockList.cpp.o
-
-BlockList.i: BlockList.cpp.i
-
-.PHONY : BlockList.i
-
-# target to preprocess a source file
-BlockList.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/BlockList.cpp.i
-.PHONY : BlockList.cpp.i
-
-BlockList.s: BlockList.cpp.s
-
-.PHONY : BlockList.s
-
-# target to generate assembly for a file
-BlockList.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/BlockList.cpp.s
-.PHONY : BlockList.cpp.s
-
 MemPool.o: MemPool.cpp.o
 
 .PHONY : MemPool.o
@@ -204,32 +177,32 @@ MemoryManager.cpp.s:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemoryManager.cpp.s
 .PHONY : MemoryManager.cpp.s
 
-MyAllocator.o: MyAllocator.cpp.o
+freeblock.o: freeblock.cpp.o
 
-.PHONY : MyAllocator.o
+.PHONY : freeblock.o
 
 # target to build an object file
-MyAllocator.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MyAllocator.cpp.o
-.PHONY : MyAllocator.cpp.o
+freeblock.cpp.o:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/freeblock.cpp.o
+.PHONY : freeblock.cpp.o
 
-MyAllocator.i: MyAllocator.cpp.i
+freeblock.i: freeblock.cpp.i
 
-.PHONY : MyAllocator.i
+.PHONY : freeblock.i
 
 # target to preprocess a source file
-MyAllocator.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MyAllocator.cpp.i
-.PHONY : MyAllocator.cpp.i
+freeblock.cpp.i:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/freeblock.cpp.i
+.PHONY : freeblock.cpp.i
 
-MyAllocator.s: MyAllocator.cpp.s
+freeblock.s: freeblock.cpp.s
 
-.PHONY : MyAllocator.s
+.PHONY : freeblock.s
 
 # target to generate assembly for a file
-MyAllocator.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MyAllocator.cpp.s
-.PHONY : MyAllocator.cpp.s
+freeblock.cpp.s:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/freeblock.cpp.s
+.PHONY : freeblock.cpp.s
 
 main.o: main.cpp.o
 
@@ -267,18 +240,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cppEx2"
-	@echo "... BlockList.o"
-	@echo "... BlockList.i"
-	@echo "... BlockList.s"
 	@echo "... MemPool.o"
 	@echo "... MemPool.i"
 	@echo "... MemPool.s"
 	@echo "... MemoryManager.o"
 	@echo "... MemoryManager.i"
 	@echo "... MemoryManager.s"
-	@echo "... MyAllocator.o"
-	@echo "... MyAllocator.i"
-	@echo "... MyAllocator.s"
+	@echo "... freeblock.o"
+	@echo "... freeblock.i"
+	@echo "... freeblock.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
