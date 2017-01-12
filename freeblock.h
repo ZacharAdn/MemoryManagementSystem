@@ -5,6 +5,8 @@
 #ifndef CPPEX2_FREEBLOCK_H
 #define CPPEX2_FREEBLOCK_H
 
+#include <string>
+using namespace std;
 
 class freeblock {
 
@@ -30,6 +32,9 @@ public:
 
     void setAvailable(bool available);
 
+//    string toString();
+//
+    string toString();
 
 private:
     void* startPtr;

@@ -5,52 +5,63 @@
 #ifndef CPPEX2_MEMORYMANAGER_H
 #define CPPEX2_MEMORYMANAGER_H
 
-
 #include <cstddef>
 #include <vector>
 #include "MemPool.h"
 #include "MyAllocator.h"
 #include "freeblock.h"
+#include "math.h"
+#include "AllocationStrategy.h"
 
+using namespace std;
 
 class MemoryManager {
 public:
-    MemoryManager();
 
-    MemoryManager(size_t heapSize);
+    enum AllocationType{
+        FirstFit
+    };
 
-    virtual ~MemoryManager();
+    static MemoryManager* getInstane(size_t heapSize=0, int type = FirstFit);
 
-//    size_t getHeapSize() const;
+    //the class are singleton - the copy ctr and operator=, not need to be used
+    MemoryManager(MemoryManager const&) = delete;
 
-    int findBlock(void* ptr);
+    void operator=(MemoryManager const&) = delete;
 
-    void* allocate(size_t);
 
-    void   free(void*);
+    void* operator new (size_t size);
+
+    void operator delete(void* ptr);
+
+
+    void* myAllocate(size_t size);
+
+    void myFree(void *ptr);
+
+    ~MemoryManager();
+
+    AllocationStrategy *strategy;
+
 
 private:
-//    std::map<size_t, std::list<freeblock, mystd::MyAllocator<freeblock>>,
-//            less<size_t>,
-//            mystd::MyAllocator<pair<size_t, std::list<freeblock, mystd::MyAllocator<freeblock>>>>> *freeLists;
-//
-//    std::map<void*,
-//            size_t ,
-//            less<void*> ,
-//            mystd::MyAllocator<pair<void*, size_t>>> associativeArray;
 
+    MemoryManager();
 
-    std::vector<freeblock, mystd::allocator<freeblock>> blocksList;
+    MemoryManager(size_t heapSize,int strategyType);
 
-    std::vector<freeblock, mystd::allocator<freeblock>> freeList;
+    static MemoryManager *instance;
 
-    MemPool *pool ;
+    MemPool *pool;
 
     size_t heapSize;
 
     size_t numOfBlocks;
 
-    size_t numOfBytes;};
+    size_t numOfBytes;
+
+    void * setStrategy(int pStrategy);
+};
 
 
 #endif //CPPEX2_MEMORYMANAGER_H

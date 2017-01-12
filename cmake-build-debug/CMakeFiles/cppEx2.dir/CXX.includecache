@@ -6,9 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/zahar/ClionProjects/cppEx2/MemPool.cpp
+/home/zahar/ClionProjects/cppEx2/AllocationStrategy.cpp
+iostream
+-
+AllocationStrategy.h
+/home/zahar/ClionProjects/cppEx2/AllocationStrategy.h
+
+/home/zahar/ClionProjects/cppEx2/AllocationStrategy.h
+cstdio
+-
 MemPool.h
 /home/zahar/ClionProjects/cppEx2/MemPool.h
+
+/home/zahar/ClionProjects/cppEx2/FirstFitStrategy.cpp
+FirstFitStrategy.h
+/home/zahar/ClionProjects/cppEx2/FirstFitStrategy.h
+
+/home/zahar/ClionProjects/cppEx2/FirstFitStrategy.h
+vector
+-
+math.h
+-
+AllocationStrategy.h
+/home/zahar/ClionProjects/cppEx2/AllocationStrategy.h
+freeblock.h
+/home/zahar/ClionProjects/cppEx2/freeblock.h
+MyAllocator.h
+/home/zahar/ClionProjects/cppEx2/MyAllocator.h
 
 /home/zahar/ClionProjects/cppEx2/MemPool.h
 cstdio
@@ -25,12 +49,8 @@ iostream
 -
 MemoryManager.h
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
-math.h
-/home/zahar/ClionProjects/cppEx2/math.h
-MemPool.h
-/home/zahar/ClionProjects/cppEx2/MemPool.h
-MyAllocator.h
-/home/zahar/ClionProjects/cppEx2/MyAllocator.h
+FirstFitStrategy.h
+/home/zahar/ClionProjects/cppEx2/FirstFitStrategy.h
 
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
 cstddef
@@ -43,6 +63,10 @@ MyAllocator.h
 /home/zahar/ClionProjects/cppEx2/MyAllocator.h
 freeblock.h
 /home/zahar/ClionProjects/cppEx2/freeblock.h
+math.h
+/home/zahar/ClionProjects/cppEx2/math.h
+AllocationStrategy.h
+/home/zahar/ClionProjects/cppEx2/AllocationStrategy.h
 
 /home/zahar/ClionProjects/cppEx2/MyAllocator.h
 memory
@@ -54,10 +78,6 @@ iostream
 limits
 -
 
-/home/zahar/ClionProjects/cppEx2/Operators.h
-MemoryManager.h
-/home/zahar/ClionProjects/cppEx2/MemoryManager.h
-
 /home/zahar/ClionProjects/cppEx2/freeblock.cpp
 cstdio
 -
@@ -65,18 +85,14 @@ freeblock.h
 /home/zahar/ClionProjects/cppEx2/freeblock.h
 
 /home/zahar/ClionProjects/cppEx2/freeblock.h
+string
+-
 
 /home/zahar/ClionProjects/cppEx2/main.cpp
 iostream
 -
-zconf.h
--
-string
--
 MemoryManager.h
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
-MemPool.h
-/home/zahar/ClionProjects/cppEx2/MemPool.h
-Operators.h
-/home/zahar/ClionProjects/cppEx2/Operators.h
+
+/home/zahar/ClionProjects/cppEx2/systemTools.cpp
 

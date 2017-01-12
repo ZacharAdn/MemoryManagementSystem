@@ -6,9 +6,12 @@
 #include "freeblock.h"
 
 
-
 freeblock::freeblock(void *startPtr, size_t size) : startPtr(startPtr), next(nullptr),
                                                     size(size), available(false) {}
+
+freeblock::~freeblock() {
+
+}
 
 void *freeblock::getStartPtr() const {
     return startPtr;
@@ -42,6 +45,6 @@ void freeblock::setAvailable(bool available) {
     freeblock::available = available;
 }
 
-freeblock::~freeblock() {
-
+string freeblock::toString() {
+    return "size: " +to_string(size) + ", next: " + next->toString() + ", availible: "+ to_string(available);
 }

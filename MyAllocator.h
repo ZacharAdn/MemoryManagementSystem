@@ -57,6 +57,8 @@ namespace mystd {
         void destroy(pointer p) {
             p->~T();
         }
+
+
     };
 
 }

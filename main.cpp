@@ -1,24 +1,51 @@
 #include <iostream>
-#include <zconf.h>
-#include <string>
 #include "MemoryManager.h"
-#include "MemPool.h"
 
-#include "Operators.h"
 
 using namespace std;
 
+
+
 int main() {
 
-//    MemoryManager mm(1000);
+    MemoryManager *memoryManager = MemoryManager::getInstane(1000, MemoryManager::AllocationType::FirstFit);
+    MemoryManager *memoryManager2= MemoryManager::getInstane(10, MemoryManager::AllocationType::FirstFit);
+
+    int *t = new int(5);
+
+    char *a = new char('&');
 
     int * g = new int[10];
 
     int * gt= new int[10];
 
-    int *t = new int(5);
 
-    delete[] g;
+    delete (t);
+
+    delete [] gt;
 
     return 0;
 }
+
+
+void* operator new(size_t size){
+    cout << "new\n";
+    return MemoryManager::getInstane()->myAllocate(size);
+}
+
+
+void* operator new[](size_t size){
+    cout << "new []\n";
+    return MemoryManager::getInstane()->myAllocate(size);
+}
+
+void operator delete(void* toDelete){
+    cout<<"delete\n";
+    MemoryManager::getInstane()->myFree(toDelete);
+}
+
+void operator delete[](void* toDelete){
+    cout<<"delete[]\n";
+    MemoryManager::getInstane()->myFree(toDelete);
+}
+

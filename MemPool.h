@@ -17,8 +17,8 @@ using namespace std;
 
 class MemPool {
 public:
-    static MemPool& getInstane(size_t heapSize) {
-        static MemPool instance(heapSize);
+    static MemPool* getInstane(size_t heapSize) {
+        static MemPool* instance = new MemPool(heapSize);
         return instance;
     }
 
@@ -49,6 +49,15 @@ private:
         myHeap = (char*)malloc(heapSize);
         this->currentFreeLocation_ptr = 0;
 //        nextFreeLocation_ptr = myHeap;
+    }
+
+
+    void* operator new(size_t size){
+        return malloc(size);
+    }
+
+    void operator delete(void* ptr){
+        free(ptr);
     }
 
 };

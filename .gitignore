@@ -32,7 +32,16 @@ fabric.properties
  modules.xml
  *.ipr
 itzik/*
+liat/*
 .idea/*
 cmake-build-debug/CMakeFiles/CMakeTmp/
 ibm/*
 # End of https://www.gitignore.io/api/jetbrains
+.idea/
+cmake-build-debug/CMakeFiles/cppEx2.dir/MemPool.cpp.o
+cmake-build-debug/CMakeFiles/cppEx2.dir/MemoryManager.cpp.o
+cmake-build-debug/CMakeFiles/cppEx2.dir/freeblock.cpp.o
+cmake-build-debug/cppEx2
+cppEx2.tar.gz
+itzik/
+liat/
