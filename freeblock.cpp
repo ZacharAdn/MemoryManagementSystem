@@ -45,6 +45,10 @@ void freeblock::setAvailable(bool available) {
     freeblock::available = available;
 }
 
-string freeblock::toString() {
-    return "size: " +to_string(size) + ", next: " + next->toString() + ", availible: "+ to_string(available);
+void* freeblock::operator new(size_t size){
+    return malloc(size);
+}
+
+void freeblock::operator delete(void* ptr){
+    free(ptr);
 }

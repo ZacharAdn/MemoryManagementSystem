@@ -10,6 +10,7 @@
 #include <zconf.h>
 #include <map>
 #include <list>
+#include <iostream>
 
 using namespace std;
 
@@ -27,28 +28,31 @@ public:
     void operator=(MemPool const&) = delete;
 
     void* getNextFreeLocationPtr(size_t size){
-        if(this->availableSize < size){
+        if(size > availableSizeOnHeap){
             return nullptr;
         }
-        availableSize = availableSize - size;
-        this->currentFreeLocation_ptr = this->currentFreeLocation_ptr +size;//this->nextFreeLocation_ptr;
-//        this->nextFreeLocation_ptr = nextFreeLocation_ptr  + size;
-        return (void*)(&myHeap[this->currentFreeLocation_ptr-size]);
+        availableSizeOnHeap -= size;
+        addressLocation = &myHeap[indexLocation];
+        indexLocation += size;
+
+        cout << "\nallocated: " << to_string(availableSizeOnHeap) << "\n";
+
+        return addressLocation;
     }
 
 
 private:
     MemPool() {}
-//    void* nextFreeLocation_ptr;
-    size_t currentFreeLocation_ptr;
-    size_t availableSize ;
+    void* addressLocation;
+    size_t indexLocation;
+    size_t availableSizeOnHeap ;
     char* myHeap;
 
     MemPool(size_t heapSize) {
-        availableSize =heapSize;
+        availableSizeOnHeap =heapSize;
         myHeap = (char*)malloc(heapSize);
-        this->currentFreeLocation_ptr = 0;
-//        nextFreeLocation_ptr = myHeap;
+        this->indexLocation = 0;
+//        addressLocation = myHeap;
     }
 
 

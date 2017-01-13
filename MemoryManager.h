@@ -23,17 +23,13 @@ public:
     };
 
     static MemoryManager* getInstane(size_t heapSize=0, int type = FirstFit);
-
-    //the class are singleton - the copy ctr and operator=, not need to be used
+    //the class is singleton - the copy ctr and operator=, not need to be used
     MemoryManager(MemoryManager const&) = delete;
-
     void operator=(MemoryManager const&) = delete;
-
 
     void* operator new (size_t size);
 
     void operator delete(void* ptr);
-
 
     void* myAllocate(size_t size);
 
@@ -43,13 +39,13 @@ public:
 
     AllocationStrategy *strategy;
 
-
 private:
 
     MemoryManager();
 
     MemoryManager(size_t heapSize,int strategyType);
 
+    //the singleton object
     static MemoryManager *instance;
 
     MemPool *pool;

@@ -20,11 +20,6 @@ public:
 
     virtual void myFree(void *ptr) =0 ;
 
-    void* operator new (size_t size);
-
-    void operator delete(void* ptr);
-
-
 protected:
 
     MemPool *pool;

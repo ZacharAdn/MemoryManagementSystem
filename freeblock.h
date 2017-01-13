@@ -18,6 +18,11 @@ public:
 
     void *getStartPtr() const;
 
+    void* operator new(size_t size);
+
+    void operator delete(void* ptr);
+
+
     void setStartPtr(void *startPtr);
 
     freeblock *getNext() const;
@@ -32,9 +37,6 @@ public:
 
     void setAvailable(bool available);
 
-//    string toString();
-//
-    string toString();
 
 private:
     void* startPtr;

@@ -29,6 +29,7 @@ CMakeFiles/cppEx2.dir/main.cpp.o: ../MemoryManager.h
 CMakeFiles/cppEx2.dir/main.cpp.o: ../MyAllocator.h
 CMakeFiles/cppEx2.dir/main.cpp.o: ../freeblock.h
 CMakeFiles/cppEx2.dir/main.cpp.o: ../main.cpp
+CMakeFiles/cppEx2.dir/main.cpp.o: ../systemTools.h
 
 CMakeFiles/cppEx2.dir/systemTools.cpp.o: ../systemTools.cpp
 

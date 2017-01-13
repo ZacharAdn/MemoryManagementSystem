@@ -3,27 +3,32 @@
 ////
 //
 //#include "systemTools.h"
-//#include "FirstFitStrategy.h"
+//#include "MemoryManager.h"
 //
-//systemTools::systemTools() {
-////    strategy= nullptr;
-//}
+//systemTools::systemTools() {}
 //
 //systemTools::~systemTools() {
-////
-//}
-//
-///*MemoryManager* */ void systemTools::setMemoryManagerStrategy(int type, size_t size) {
-////    delete strategy;
-//
-//    if(type == FirstFit){
-//        cout << "firstFit";
-//
-//        /*return strategy = */
-//
-//        initialFirstFitManager(size);
-//    }
 //
 //}
 //
+//void* operator new(size_t size){
+//    cout << "new\n";
+//    return MemoryManager::getInstane()->myAllocate(size);
+//}
+//
+//
+//void* operator new[](size_t size){
+//    cout << "new []\n";
+//    return MemoryManager::getInstane()->myAllocate(size);
+//}
+//
+//void operator delete(void* toDelete){
+//    cout<<"delete\n";
+//    MemoryManager::getInstane()->myFree(toDelete);
+//}
+//
+//void operator delete[](void* toDelete){
+//    cout<<"delete[]\n";
+//    MemoryManager::getInstane()->myFree(toDelete);
+//}
 //

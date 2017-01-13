@@ -10,11 +10,3 @@ AllocationStrategy::AllocationStrategy(MemPool *pool) : pool(pool) {}
 AllocationStrategy::~AllocationStrategy() {
 
 }
-
-void *AllocationStrategy::operator new(size_t size) {
-    return malloc(size);
-}
-
-void AllocationStrategy::operator delete(void *ptr) {
-    free(ptr);
-}
