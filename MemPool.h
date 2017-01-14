@@ -41,6 +41,12 @@ public:
     }
 
 
+    void updateHeap(size_t size) {
+        availableSizeOnHeap += size;
+
+
+    }
+
 private:
     MemPool() {}
     void* addressLocation;

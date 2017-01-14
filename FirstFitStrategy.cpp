@@ -39,9 +39,10 @@ void *FirstFitStrategy::myAllocate(size_t size) {
                 size_t newSize = freeList.at(i)->getSize() - fixedSize;//TODO fix size for newSize
 
                 void* newPtr = freeList.at(i)->getStartPtr() + fixedSize;
-                freeblock *f1 =new freeblock(newPtr, newSize);
+                freeblock *f1 = new freeblock(newPtr, newSize);
                 f1->setAvailable(true);
                 f1->setNext(freeList.at(i)->getNext());
+
                 /////// update blockList//////////
                 size_t index = (size_t) findBlock(freeList.at(i)->getStartPtr());
                 blocksList.at(index)->setSize(fixedSize);
@@ -104,26 +105,10 @@ void *FirstFitStrategy::myAllocate(size_t size) {
 }
 
 void FirstFitStrategy::myFree(void *pointer) {
-//   int size= associativeArray.at(pointer);
-//   cout<< size;
-//    cout<<"myFree"<<endl;
-//    int size = associativeArray.at(pointer);
-//    cout<< size;
-//    freeblock f(size,pointer);
-//    if(!freeLists->empty() && freeLists->find(pow(2,ceil(log2(size)))) != freeLists->end()){
-//        freeLists->at(pow(2,ceil(log2(size)))).push_back(f);
-//    }
-//    else{
-//        //list<freeblock,mystd::MyAllocator<freeblock>> listi;
-//        list<freeblock,JVC::allocator<freeblock>> listi;
-//        listi.push_back(f);
-//        freeLists.insert(make_pair(size,listi));
-//    }
-
     size_t index = (size_t) findBlock(pointer);
     blocksList[index]->setAvailable(true);
+    pool->updateHeap(blocksList[index]->getSize());
     freeList.push_back(blocksList[index]);
-
 }
 
 int FirstFitStrategy::findBlock(void* ptr) {
