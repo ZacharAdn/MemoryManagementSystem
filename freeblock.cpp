@@ -7,7 +7,7 @@
 
 
 freeblock::freeblock(void *startPtr, size_t size) : startPtr(startPtr), next(nullptr),
-                                                    size(size), available(false) {}
+                                                    size(size) {}
 
 freeblock::~freeblock() {
 
@@ -37,14 +37,6 @@ void freeblock::setSize(size_t size) {
     freeblock::size = size;
 }
 
-bool freeblock::isAvailable() const {
-    return available;
-}
-
-void freeblock::setAvailable(bool available) {
-    freeblock::available = available;
-}
-
 void* freeblock::operator new(size_t size){
     return malloc(size);
 }
@@ -52,3 +44,11 @@ void* freeblock::operator new(size_t size){
 void freeblock::operator delete(void* ptr){
     free(ptr);
 }
+
+//int freeblock::getAddressIndex() const {
+//    return addressIndex;
+//}
+//
+//void freeblock::setAddressIndex(int addressIndex) {
+//    freeblock::addressIndex = addressIndex;
+//}

@@ -4,7 +4,7 @@
 
 #include "FirstFitStrategy.h"
 
-FirstFitStrategy::FirstFitStrategy(MemPool *pool) : AllocationStrategy(pool) {}
+FirstFitStrategy::FirstFitStrategy(MemPool *pool) : AllocationStrategy(pool), freeList(new blocksLinkedList()) {}
 
 FirstFitStrategy::~FirstFitStrategy() {
 
@@ -12,114 +12,120 @@ FirstFitStrategy::~FirstFitStrategy() {
 
 void *FirstFitStrategy::myAllocate(size_t size) {
     size_t fixedSize = (size_t) pow(2,ceil(log2(size)));
+    freeblock *newBlock;
+    void* ptr = nullptr;
 
-    if(freeList.empty()){//TODO why freeList?
-        void* ptrAddress = pool->getNextFreeLocationPtr(fixedSize);
-        freeblock *newBlock = new freeblock(ptrAddress , fixedSize);
-        newBlock->setAvailable(false);
+    if(fixedSize < MIN_CELL_SIZE){
+        fixedSize = MIN_CELL_SIZE;
+    }
 
-        blocksList.push_back(newBlock);
+    if(freeList->empty()){
 
-        if(!blocksList.empty()){
-            blocksList.at(blocksList.size()-1)->setNext(newBlock);
+        ptr = pool->getNextFreeLocationPtr(fixedSize);
+        if(ptr== nullptr){
+            std::cout << "NO MORE SPACE ON THE HEAP";
+            exit(1);
         }
 
+        newBlock = new freeblock(ptr , fixedSize);
+
+        associativeArray[newBlock->getStartPtr()] = newBlock;
         return newBlock->getStartPtr();
 
     }else{
+        newBlock = findCustomBlock(fixedSize);
 
-        for(size_t i = 0 ; i < freeList.size() ; i++){
-            if(freeList.at(i)->getSize() == fixedSize){
-                return freeList.at(i)->getStartPtr();
+        if(!newBlock){//its no blocks with enough space
+            ptr = pool->getNextFreeLocationPtr(fixedSize);//allocate object on the heap
+            if(ptr== nullptr){
+                std::cout << "NO MORE SPACE ON THE HEAP";
+                exit(1);
             }
-
-            if(freeList.at(i)->getSize() > fixedSize){
-                //here we need to cut block
-                size_t oldSize = freeList.at(i)->getSize();
-                size_t newSize = freeList.at(i)->getSize() - fixedSize;//TODO fix size for newSize
-
-                void* newPtr = freeList.at(i)->getStartPtr() + fixedSize;
-                freeblock *f1 = new freeblock(newPtr, newSize);
-                f1->setAvailable(true);
-                f1->setNext(freeList.at(i)->getNext());
-
-                /////// update blockList//////////
-                size_t index = (size_t) findBlock(freeList.at(i)->getStartPtr());
-                blocksList.at(index)->setSize(fixedSize);
-                blocksList.at(index)->setAvailable(false);
-                blocksList.at(index)->setNext(f1);
-                blocksList.insert(blocksList.begin()+index , f1);
-                ///////// update freeList///////////
-                freeList.at(i)->setSize(fixedSize);
-                freeList.at(i)->setNext(f1);
-                freeList.push_back(f1);
-                freeblock *tmp = freeList.at(i);
-                freeList.erase(freeList.begin()+i);
-                return tmp->getStartPtr();
-            }
+            newBlock = new freeblock(ptr,fixedSize);
+            associativeArray.emplace(ptr,newBlock);
         }
-//
-//        cout << "lalala";
-//
-//        for (std::vector<freeblock,mystd::allocator<freeblock>>::iterator i = blocksList.begin(); i != blocksList.end(); ++i)
-//            std::cout << i->toString() << ' ';
-
-
-        void* ptr = this->pool->getNextFreeLocationPtr(fixedSize);//myAllocate object on the heap
-        if(ptr!=nullptr){
-            freeblock *f= new freeblock(ptr ,fixedSize);
-            f->setAvailable(false);
-            freeblock *f1 = blocksList.at(blocksList.size()-1);
-            blocksList.pop_back();
-            f->setNext(f1);
-            blocksList.push_back(f1);
-            blocksList.push_back(f);
-        }
-        else{ /////// if we need, here we need to merge chunks////////
-            for(size_t i = 0 ; i < freeList.size() ; i++){
-                freeblock *temp=freeList.at(i);
-                size_t sumSize=fixedSize;
-                size_t countIteration=0;
-                while(temp->getNext()->isAvailable() && sumSize>0){
-                    temp=temp->getNext();
-                    sumSize-=temp->getSize();
-                    countIteration++;
-                }
-                if(sumSize<=0){
-                    int index=findBlock(freeList.at(i)->getStartPtr());
-                    blocksList[index]->setSize(fixedSize);
-                    blocksList[index]->setAvailable(false);
-                    blocksList[index]->setNext(blocksList.at(index+countIteration-1)->getNext());
-                    for(int j=1;j<countIteration;j++){
-                        blocksList.erase(blocksList.begin()+index+j);
-                    }
-                    //blocksList.erase(blocksList.begin()+index+countIteration);
-                    for(int j=0;j<countIteration;j++){
-                        freeList.erase(freeList.begin()+i+j);
-                    }
-                    return blocksList[index]->getStartPtr();
-                }
-            }
-        }
+        return newBlock;
     }
+    exit(1);
 }
 
-void FirstFitStrategy::myFree(void *pointer) {
-    size_t index = (size_t) findBlock(pointer);
-    blocksList[index]->setAvailable(true);
-    pool->updateHeap(blocksList[index]->getSize());
-    freeList.push_back(blocksList[index]);
+void FirstFitStrategy::myFree(void *ptr) {
+    freeList->addBlock(associativeArray[ptr]);
 }
 
-int FirstFitStrategy::findBlock(void* ptr) {
-    for(int i = 0 ; blocksList.size() ; i++){
-        if(blocksList.at((size_t)i)->getStartPtr()== ptr){
-            return i;
+
+freeblock *FirstFitStrategy::findCustomBlock(size_t size) {
+    freeblock *current = freeList->getHead(), *firstToMerge= nullptr,*result= nullptr, *cutedBlock = nullptr;
+    size_t mergedSize = 0, mergeCount = 0;
+
+    std::vector<freeblock*, mystd::allocator<freeblock*>> *blocksToDelete;
+
+
+
+    while(current!= nullptr){
+
+        if(current->getSize() == size){// block with same size
+            freeList->removeByPtr(current->getStartPtr());
+            return current;
+        }else if(current->getSize() > size) {// need to cut from the current
+
+            size_t cutedSize = current->getSize()/2;
+
+            void* ptrAns = current->getStartPtr();;
+            associativeArray.erase(current->getStartPtr());
+            freeList->removeByPtr(current->getStartPtr());
+
+            while (cutedSize >= size){
+                cutedBlock = new freeblock((char*)ptrAns+cutedSize , cutedSize);
+                freeList->addBlock(cutedBlock);
+                associativeArray.emplace(cutedBlock->getStartPtr(),cutedBlock);
+                cutedSize /= 2;
+            }
+
+            result = new freeblock(ptrAns,cutedSize);
+            associativeArray.emplace(result->getStartPtr(),result);
+
+
+            return result;
+        }else if(current->getSize() < size){//need to merge blocks
+            if(mergedSize == 0) {
+                firstToMerge = current;
+            }
+            mergedSize += current->getSize();
+            mergeCount++;
+            blocksToDelete->push_back(current);
         }
-    }
-    return -1;
-}
 
+
+        if(mergedSize == size){
+            for (size_t j = 0; j < mergeCount; ++j) {
+                associativeArray.erase(blocksToDelete->at(j)->getStartPtr());
+                freeList->removeByPtr(blocksToDelete->at(j)->getStartPtr());
+            }
+
+            result = new freeblock(firstToMerge->getStartPtr(),mergedSize);
+            associativeArray.emplace(result->getStartPtr(),result);
+            return result;
+        }else if(mergedSize > size){
+            size_t overSize = mergedSize-size;
+            for (size_t j = 0; j < mergeCount; ++j) {
+                associativeArray.erase(blocksToDelete->at(j));
+                freeList->removeByPtr(blocksToDelete->at(j));
+            }
+
+            freeblock *cuted = new freeblock(blocksToDelete->at(mergeCount-1)+size, overSize);
+            freeList->addBlock(cuted);
+
+            result = new freeblock(firstToMerge->getStartPtr(),size);
+            associativeArray.emplace(result->getStartPtr(),result);
+
+            return result;
+        }
+        current=current->getNext();
+    }
+
+    return nullptr;
+}
 
 void* FirstFitStrategy::operator new(size_t size){
     std::cout << "first new";
@@ -128,4 +134,15 @@ void* FirstFitStrategy::operator new(size_t size){
 
 void FirstFitStrategy::operator delete(void* ptr){
     free(ptr);
+}
+
+size_t FirstFitStrategy::howMuchToCut(size_t currentBlockSize, size_t size) {
+    size_t sourceSize = currentBlockSize;
+
+    while (sourceSize/2 > size){
+
+        sourceSize /= 2;
+    }
+
+    return 0;
 }

@@ -4,12 +4,14 @@
 CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o: ../AllocationStrategy.cpp
 CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o: ../AllocationStrategy.h
 CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o: ../MemPool.h
+CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o: ../freeblock.h
 
 CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o: ../AllocationStrategy.h
 CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o: ../FirstFitStrategy.cpp
 CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o: ../FirstFitStrategy.h
 CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o: ../MemPool.h
 CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o: ../MyAllocator.h
+CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o: ../blocksLinkedList.h
 CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o: ../freeblock.h
 
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../AllocationStrategy.h
@@ -18,7 +20,13 @@ CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MemPool.h
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MemoryManager.cpp
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MemoryManager.h
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../MyAllocator.h
+CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../blocksLinkedList.h
 CMakeFiles/cppEx2.dir/MemoryManager.cpp.o: ../freeblock.h
+
+CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o: ../MyAllocator.h
+CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o: ../blocksLinkedList.cpp
+CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o: ../blocksLinkedList.h
+CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o: ../freeblock.h
 
 CMakeFiles/cppEx2.dir/freeblock.cpp.o: ../freeblock.cpp
 CMakeFiles/cppEx2.dir/freeblock.cpp.o: ../freeblock.h
@@ -29,6 +37,7 @@ CMakeFiles/cppEx2.dir/main.cpp.o: ../MemoryManager.h
 CMakeFiles/cppEx2.dir/main.cpp.o: ../MyAllocator.h
 CMakeFiles/cppEx2.dir/main.cpp.o: ../freeblock.h
 CMakeFiles/cppEx2.dir/main.cpp.o: ../main.cpp
+CMakeFiles/cppEx2.dir/main.cpp.o: ../systemTools.h
 
 CMakeFiles/cppEx2.dir/systemTools.cpp.o: ../systemTools.cpp
 

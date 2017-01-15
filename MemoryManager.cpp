@@ -8,6 +8,7 @@
 
 
 
+
 MemoryManager *MemoryManager::instance = nullptr;
 
 MemoryManager::MemoryManager(size_t _heapSize, int strategyType)
@@ -38,6 +39,8 @@ void *MemoryManager::setStrategy(int strategyType) {
     if(strategyType == FirstFit){
         strategy = new FirstFitStrategy(pool);
     }
+
+
 }
 
 void *MemoryManager::myAllocate(size_t size) {

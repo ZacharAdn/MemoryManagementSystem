@@ -204,6 +204,33 @@ MemoryManager.cpp.s:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemoryManager.cpp.s
 .PHONY : MemoryManager.cpp.s
 
+blocksLinkedList.o: blocksLinkedList.cpp.o
+
+.PHONY : blocksLinkedList.o
+
+# target to build an object file
+blocksLinkedList.cpp.o:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o
+.PHONY : blocksLinkedList.cpp.o
+
+blocksLinkedList.i: blocksLinkedList.cpp.i
+
+.PHONY : blocksLinkedList.i
+
+# target to preprocess a source file
+blocksLinkedList.cpp.i:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.i
+.PHONY : blocksLinkedList.cpp.i
+
+blocksLinkedList.s: blocksLinkedList.cpp.s
+
+.PHONY : blocksLinkedList.s
+
+# target to generate assembly for a file
+blocksLinkedList.cpp.s:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.s
+.PHONY : blocksLinkedList.cpp.s
+
 freeblock.o: freeblock.cpp.o
 
 .PHONY : freeblock.o
@@ -303,6 +330,9 @@ help:
 	@echo "... MemoryManager.o"
 	@echo "... MemoryManager.i"
 	@echo "... MemoryManager.s"
+	@echo "... blocksLinkedList.o"
+	@echo "... blocksLinkedList.i"
+	@echo "... blocksLinkedList.s"
 	@echo "... freeblock.o"
 	@echo "... freeblock.i"
 	@echo "... freeblock.s"

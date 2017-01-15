@@ -11,6 +11,8 @@
 #include <map>
 #include <list>
 #include <iostream>
+#include "freeblock.h"
+
 
 using namespace std;
 
@@ -27,6 +29,14 @@ public:
     MemPool(MemPool const&) = delete;
     void operator=(MemPool const&) = delete;
 
+    void* operator new(size_t size){
+        return malloc(size);
+    }
+
+    void operator delete(void* ptr){
+        free(ptr);
+    }
+
     void* getNextFreeLocationPtr(size_t size){
         if(size > availableSizeOnHeap){
             return nullptr;
@@ -41,12 +51,6 @@ public:
     }
 
 
-    void updateHeap(size_t size) {
-        availableSizeOnHeap += size;
-
-
-    }
-
 private:
     MemPool() {}
     void* addressLocation;
@@ -57,20 +61,9 @@ private:
     MemPool(size_t heapSize) {
         availableSizeOnHeap =heapSize;
         myHeap = (char*)malloc(heapSize);
-        this->indexLocation = 0;
-//        addressLocation = myHeap;
-    }
-
-
-    void* operator new(size_t size){
-        return malloc(size);
-    }
-
-    void operator delete(void* ptr){
-        free(ptr);
+        indexLocation = 0;
     }
 
 };
-
 
 #endif //CPPEX2_MEMPOOL_H

@@ -5,11 +5,13 @@
 #ifndef CPPEX2_FIRSTFITSTRATEGY_H
 #define CPPEX2_FIRSTFITSTRATEGY_H
 
+#define MIN_CELL_SIZE 4
 #include <vector>
 #include <math.h>
 #include "AllocationStrategy.h"
 #include "freeblock.h"
 #include "MyAllocator.h"
+#include "blocksLinkedList.h"
 
 
 class FirstFitStrategy : public AllocationStrategy {
@@ -27,15 +29,15 @@ public:
 
     void myFree(void *ptr);
 
-    int findBlock(void* ptr);
-
 private:
 
-    std::vector<freeblock*, mystd::allocator<freeblock*>> freeList;
+    blocksLinkedList *freeList;
 
-    std::vector<freeblock*, mystd::allocator<freeblock*>> blocksList;
+    std::map<void*,freeblock*, less<void*>, mystd::allocator<pair<void* ,freeblock*>>> associativeArray;
 
+    freeblock *findCustomBlock(size_t size);
 
+    size_t howMuchToCut(size_t currentBlockSize, size_t size);
 };
 
 

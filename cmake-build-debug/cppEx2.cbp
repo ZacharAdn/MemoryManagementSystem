@@ -108,6 +108,12 @@
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/MyAllocator.h">
 			<Option target="cppEx2"/>
 		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/blocksLinkedList.cpp">
+			<Option target="cppEx2"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/blocksLinkedList.h">
+			<Option target="cppEx2"/>
+		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/freeblock.cpp">
 			<Option target="cppEx2"/>
 		</Unit>

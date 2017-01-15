@@ -22,7 +22,6 @@ public:
 
     void operator delete(void* ptr);
 
-
     void setStartPtr(void *startPtr);
 
     freeblock *getNext() const;
@@ -33,19 +32,12 @@ public:
 
     void setSize(size_t size);
 
-    bool isAvailable() const;
-
-    void setAvailable(bool available);
-
-
 private:
     void* startPtr;
 
     freeblock* next;
 
     size_t size;
-
-    bool available;
 };
 
 

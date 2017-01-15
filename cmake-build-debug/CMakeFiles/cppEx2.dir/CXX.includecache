@@ -33,6 +33,8 @@ freeblock.h
 /home/zahar/ClionProjects/cppEx2/freeblock.h
 MyAllocator.h
 /home/zahar/ClionProjects/cppEx2/MyAllocator.h
+blocksLinkedList.h
+/home/zahar/ClionProjects/cppEx2/blocksLinkedList.h
 
 /home/zahar/ClionProjects/cppEx2/MemPool.h
 cstdio
@@ -45,6 +47,8 @@ list
 -
 iostream
 -
+freeblock.h
+/home/zahar/ClionProjects/cppEx2/freeblock.h
 
 /home/zahar/ClionProjects/cppEx2/MemoryManager.cpp
 iostream
@@ -80,6 +84,20 @@ iostream
 limits
 -
 
+/home/zahar/ClionProjects/cppEx2/blocksLinkedList.cpp
+vector
+-
+map
+-
+blocksLinkedList.h
+/home/zahar/ClionProjects/cppEx2/blocksLinkedList.h
+MyAllocator.h
+/home/zahar/ClionProjects/cppEx2/MyAllocator.h
+
+/home/zahar/ClionProjects/cppEx2/blocksLinkedList.h
+freeblock.h
+/home/zahar/ClionProjects/cppEx2/freeblock.h
+
 /home/zahar/ClionProjects/cppEx2/freeblock.cpp
 cstdio
 -
@@ -95,6 +113,14 @@ iostream
 -
 MemoryManager.h
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
+systemTools.h
+/home/zahar/ClionProjects/cppEx2/systemTools.h
 
 /home/zahar/ClionProjects/cppEx2/systemTools.cpp
+
+/home/zahar/ClionProjects/cppEx2/systemTools.h
+iostream
+-
+MemoryManager.h
+/home/zahar/ClionProjects/cppEx2/MemoryManager.h
 

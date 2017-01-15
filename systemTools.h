@@ -17,9 +17,9 @@ using namespace std;
 //
 //    virtual ~systemTools();
 //
-//    void* operator new(size_t size);
+//    void* operator new(size_t listSize);
 //
-//    void* operator new[](size_t size){
+//    void* operator new[](size_t listSize){
 //
 //        private:
 //
