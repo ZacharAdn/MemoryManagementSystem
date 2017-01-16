@@ -26,25 +26,43 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-
+/**
+ * override the global new
+ * @param size
+ * @return
+ */
 void* operator new(size_t size){
     return MemoryManager::getInstane()->myAllocate(size);
 }
 
-
+/**
+ * override the global new[]
+ * @param size
+ * @return
+ */
 void* operator new[](size_t size){
     return MemoryManager::getInstane()->myAllocate(size);
 }
 
+/**
+ * override the global delete
+ * @param toDelete
+ */
 void operator delete(void* toDelete){
     MemoryManager::getInstane()->myFree(toDelete);
 }
 
+/**
+ * override the global delete[]
+ * @param toDelete
+ */
 void operator delete[](void* toDelete){
     MemoryManager::getInstane()->myFree(toDelete);
 }
 
-
+/**
+ * check for the geeric Linked List
+ */
 void LinkedListCheck() {
     CyclicGenericList <pair<char* , long*>*>* LinkedList = new CyclicGenericList <pair<char*, long*>*>();
 
