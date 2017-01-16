@@ -6,17 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/zahar/ClionProjects/cppEx2/AllocationStrategy.cpp
-iostream
--
-AllocationStrategy.h
-/home/zahar/ClionProjects/cppEx2/AllocationStrategy.h
-
 /home/zahar/ClionProjects/cppEx2/AllocationStrategy.h
 cstdio
 -
 MemPool.h
 /home/zahar/ClionProjects/cppEx2/MemPool.h
+
+/home/zahar/ClionProjects/cppEx2/CyclicGenericList.h
+iostream
+/home/zahar/ClionProjects/cppEx2/iostream
 
 /home/zahar/ClionProjects/cppEx2/FirstFitStrategy.cpp
 FirstFitStrategy.h
@@ -36,16 +34,16 @@ MyAllocator.h
 blocksLinkedList.h
 /home/zahar/ClionProjects/cppEx2/blocksLinkedList.h
 
+/home/zahar/ClionProjects/cppEx2/MemPool.cpp
+MemPool.h
+/home/zahar/ClionProjects/cppEx2/MemPool.h
+
 /home/zahar/ClionProjects/cppEx2/MemPool.h
 cstdio
--
-zconf.h
 -
 map
 -
 list
--
-iostream
 -
 freeblock.h
 /home/zahar/ClionProjects/cppEx2/freeblock.h
@@ -85,14 +83,8 @@ limits
 -
 
 /home/zahar/ClionProjects/cppEx2/blocksLinkedList.cpp
-vector
--
-map
--
 blocksLinkedList.h
 /home/zahar/ClionProjects/cppEx2/blocksLinkedList.h
-MyAllocator.h
-/home/zahar/ClionProjects/cppEx2/MyAllocator.h
 
 /home/zahar/ClionProjects/cppEx2/blocksLinkedList.h
 freeblock.h
@@ -113,14 +105,6 @@ iostream
 -
 MemoryManager.h
 /home/zahar/ClionProjects/cppEx2/MemoryManager.h
-systemTools.h
-/home/zahar/ClionProjects/cppEx2/systemTools.h
-
-/home/zahar/ClionProjects/cppEx2/systemTools.cpp
-
-/home/zahar/ClionProjects/cppEx2/systemTools.h
-iostream
--
-MemoryManager.h
-/home/zahar/ClionProjects/cppEx2/MemoryManager.h
+CyclicGenericList.h
+/home/zahar/ClionProjects/cppEx2/CyclicGenericList.h
 

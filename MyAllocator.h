@@ -12,6 +12,10 @@
 
 namespace mystd {
 
+    /**
+     * Allocator for the std structures
+     * @tparam T
+     */
     template <class T>
     struct allocator {
         typedef size_t size_type;

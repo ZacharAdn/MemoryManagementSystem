@@ -12,16 +12,42 @@
 class AllocationStrategy {
 public:
 
-    AllocationStrategy(MemPool *pool);
+    /**
+     * Abstract class of allocation type
+     * @param pool
+     */
+    AllocationStrategy(MemPool *pool) : pool(pool){}
 
-    virtual ~AllocationStrategy();
+    /**
+     * dstr
+     */
+    virtual ~AllocationStrategy(){}
 
+    /**
+     * pure virtual Allocation
+     *
+     * @param size to allocate
+     * @return ptr on the pool
+     */
     virtual void* myAllocate(size_t size) =0 ;
 
+    /**
+     * pure virtual Deallocation
+     *
+     * @param ptr to free
+     */
     virtual void myFree(void *ptr) =0 ;
+
+    /**
+     * function for memory leak check
+     */
+    virtual void valgrind() =0;
 
 protected:
 
+    /**
+     * my Heap
+     */
     MemPool *pool;
 };
 

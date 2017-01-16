@@ -153,57 +153,9 @@ CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o.provides: CMakeFiles/cppEx2.dir/Fir
 CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o.provides.build: CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o
 
 
-CMakeFiles/cppEx2.dir/systemTools.cpp.o: CMakeFiles/cppEx2.dir/flags.make
-CMakeFiles/cppEx2.dir/systemTools.cpp.o: ../systemTools.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cppEx2.dir/systemTools.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppEx2.dir/systemTools.cpp.o -c /home/zahar/ClionProjects/cppEx2/systemTools.cpp
-
-CMakeFiles/cppEx2.dir/systemTools.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppEx2.dir/systemTools.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zahar/ClionProjects/cppEx2/systemTools.cpp > CMakeFiles/cppEx2.dir/systemTools.cpp.i
-
-CMakeFiles/cppEx2.dir/systemTools.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppEx2.dir/systemTools.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zahar/ClionProjects/cppEx2/systemTools.cpp -o CMakeFiles/cppEx2.dir/systemTools.cpp.s
-
-CMakeFiles/cppEx2.dir/systemTools.cpp.o.requires:
-
-.PHONY : CMakeFiles/cppEx2.dir/systemTools.cpp.o.requires
-
-CMakeFiles/cppEx2.dir/systemTools.cpp.o.provides: CMakeFiles/cppEx2.dir/systemTools.cpp.o.requires
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/systemTools.cpp.o.provides.build
-.PHONY : CMakeFiles/cppEx2.dir/systemTools.cpp.o.provides
-
-CMakeFiles/cppEx2.dir/systemTools.cpp.o.provides.build: CMakeFiles/cppEx2.dir/systemTools.cpp.o
-
-
-CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o: CMakeFiles/cppEx2.dir/flags.make
-CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o: ../AllocationStrategy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o -c /home/zahar/ClionProjects/cppEx2/AllocationStrategy.cpp
-
-CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zahar/ClionProjects/cppEx2/AllocationStrategy.cpp > CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.i
-
-CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zahar/ClionProjects/cppEx2/AllocationStrategy.cpp -o CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.s
-
-CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o.requires:
-
-.PHONY : CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o.requires
-
-CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o.provides: CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o.requires
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o.provides.build
-.PHONY : CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o.provides
-
-CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o.provides.build: CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o
-
-
 CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o: CMakeFiles/cppEx2.dir/flags.make
 CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o: ../blocksLinkedList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o -c /home/zahar/ClionProjects/cppEx2/blocksLinkedList.cpp
 
 CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.i: cmake_force
@@ -225,15 +177,38 @@ CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o.provides: CMakeFiles/cppEx2.dir/blo
 CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o.provides.build: CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o
 
 
+CMakeFiles/cppEx2.dir/MemPool.cpp.o: CMakeFiles/cppEx2.dir/flags.make
+CMakeFiles/cppEx2.dir/MemPool.cpp.o: ../MemPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cppEx2.dir/MemPool.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppEx2.dir/MemPool.cpp.o -c /home/zahar/ClionProjects/cppEx2/MemPool.cpp
+
+CMakeFiles/cppEx2.dir/MemPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppEx2.dir/MemPool.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zahar/ClionProjects/cppEx2/MemPool.cpp > CMakeFiles/cppEx2.dir/MemPool.cpp.i
+
+CMakeFiles/cppEx2.dir/MemPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppEx2.dir/MemPool.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zahar/ClionProjects/cppEx2/MemPool.cpp -o CMakeFiles/cppEx2.dir/MemPool.cpp.s
+
+CMakeFiles/cppEx2.dir/MemPool.cpp.o.requires:
+
+.PHONY : CMakeFiles/cppEx2.dir/MemPool.cpp.o.requires
+
+CMakeFiles/cppEx2.dir/MemPool.cpp.o.provides: CMakeFiles/cppEx2.dir/MemPool.cpp.o.requires
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemPool.cpp.o.provides.build
+.PHONY : CMakeFiles/cppEx2.dir/MemPool.cpp.o.provides
+
+CMakeFiles/cppEx2.dir/MemPool.cpp.o.provides.build: CMakeFiles/cppEx2.dir/MemPool.cpp.o
+
+
 # Object files for target cppEx2
 cppEx2_OBJECTS = \
 "CMakeFiles/cppEx2.dir/main.cpp.o" \
 "CMakeFiles/cppEx2.dir/MemoryManager.cpp.o" \
 "CMakeFiles/cppEx2.dir/freeblock.cpp.o" \
 "CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o" \
-"CMakeFiles/cppEx2.dir/systemTools.cpp.o" \
-"CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o" \
-"CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o"
+"CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o" \
+"CMakeFiles/cppEx2.dir/MemPool.cpp.o"
 
 # External object files for target cppEx2
 cppEx2_EXTERNAL_OBJECTS =
@@ -242,12 +217,11 @@ cppEx2: CMakeFiles/cppEx2.dir/main.cpp.o
 cppEx2: CMakeFiles/cppEx2.dir/MemoryManager.cpp.o
 cppEx2: CMakeFiles/cppEx2.dir/freeblock.cpp.o
 cppEx2: CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o
-cppEx2: CMakeFiles/cppEx2.dir/systemTools.cpp.o
-cppEx2: CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o
 cppEx2: CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o
+cppEx2: CMakeFiles/cppEx2.dir/MemPool.cpp.o
 cppEx2: CMakeFiles/cppEx2.dir/build.make
 cppEx2: CMakeFiles/cppEx2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable cppEx2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zahar/ClionProjects/cppEx2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable cppEx2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cppEx2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -259,9 +233,8 @@ CMakeFiles/cppEx2.dir/requires: CMakeFiles/cppEx2.dir/main.cpp.o.requires
 CMakeFiles/cppEx2.dir/requires: CMakeFiles/cppEx2.dir/MemoryManager.cpp.o.requires
 CMakeFiles/cppEx2.dir/requires: CMakeFiles/cppEx2.dir/freeblock.cpp.o.requires
 CMakeFiles/cppEx2.dir/requires: CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o.requires
-CMakeFiles/cppEx2.dir/requires: CMakeFiles/cppEx2.dir/systemTools.cpp.o.requires
-CMakeFiles/cppEx2.dir/requires: CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o.requires
 CMakeFiles/cppEx2.dir/requires: CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o.requires
+CMakeFiles/cppEx2.dir/requires: CMakeFiles/cppEx2.dir/MemPool.cpp.o.requires
 
 .PHONY : CMakeFiles/cppEx2.dir/requires
 

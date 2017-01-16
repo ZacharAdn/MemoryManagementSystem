@@ -84,16 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/zahar/ClionProjects/cppEx2/AllocationStrategy.cpp">
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/AllocationStrategy.h">
 			<Option target="cppEx2"/>
 		</Unit>
-		<Unit filename="/home/zahar/ClionProjects/cppEx2/AllocationStrategy.h">
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/CyclicGenericList.h">
 			<Option target="cppEx2"/>
 		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/FirstFitStrategy.cpp">
 			<Option target="cppEx2"/>
 		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/FirstFitStrategy.h">
+			<Option target="cppEx2"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx2/MemPool.cpp">
 			<Option target="cppEx2"/>
 		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/MemPool.h">
@@ -121,12 +124,6 @@
 			<Option target="cppEx2"/>
 		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/main.cpp">
-			<Option target="cppEx2"/>
-		</Unit>
-		<Unit filename="/home/zahar/ClionProjects/cppEx2/systemTools.cpp">
-			<Option target="cppEx2"/>
-		</Unit>
-		<Unit filename="/home/zahar/ClionProjects/cppEx2/systemTools.h">
 			<Option target="cppEx2"/>
 		</Unit>
 		<Unit filename="/home/zahar/ClionProjects/cppEx2/CMakeLists.txt">

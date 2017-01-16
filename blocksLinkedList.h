@@ -11,29 +11,63 @@
 class blocksLinkedList {
 public:
 
+    /**
+     * Ctr - empty Linked List
+     */
     blocksLinkedList();
 
+    /**
+     * Ctr - new Linked List with freeblock head
+     * @param head
+     */
     blocksLinkedList(freeblock *head);
 
+    /**
+     * Dctr delete all the list
+     */
+    virtual ~blocksLinkedList();
+
+    /**
+     * Add freeblock to the list and sort the list by the ptr place on the pool
+     * @param block
+     */
     void addBlock(freeblock *block);
 
+    /**
+     * Remove freeblock by he's ptr on the pool
+     * @param ptr
+     */
     void removeByPtr(void* ptr);
 
+    /**
+     *
+     * @return true if listSize == 0
+     */
     bool empty();
 
+    /**
+     *
+     * @return head of the Linked List
+     */
     freeblock *getHead() const;
 
-    void setHead(freeblock *head);
-
+    /**
+     *
+     * @return num of elements on the Linked List
+     */
     size_t getListSize() const;
 
-    void setListSize(size_t listSize);
-
+    /**
+     * Override new
+     * @param size
+     * @return
+     */
     void* operator new(size_t size);
-
+    /**
+     * Override delete
+     * @param ptr
+     */
     void operator delete(void* ptr);
-
-    virtual ~blocksLinkedList();
 
 
 private:
@@ -42,6 +76,7 @@ private:
 
     size_t listSize;
 
+    void deleteList();
 };
 
 

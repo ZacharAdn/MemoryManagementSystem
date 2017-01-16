@@ -7,10 +7,8 @@
 
 
 #include <cstdio>
-#include <zconf.h>
 #include <map>
 #include <list>
-#include <iostream>
 #include "freeblock.h"
 
 
@@ -20,50 +18,72 @@ using namespace std;
 
 class MemPool {
 public:
-    static MemPool* getInstane(size_t heapSize) {
-        static MemPool* instance = new MemPool(heapSize);
-        return instance;
-    }
 
-    //the class are singleton - the copy ctr and operator=, not need to be used
+    /**
+     * the access to the singleton object
+     * @param heapSize
+     * @return
+     */
+    static MemPool* getInstane(size_t heapSize);
+
+    /**
+     * the class is singleton - the copy ctr and operator=, not need to be used
+     */
     MemPool(MemPool const&) = delete;
     void operator=(MemPool const&) = delete;
 
-    void* operator new(size_t size){
-        return malloc(size);
-    }
+    /**
+     * override to operator new
+     * @param size
+     * @return
+     */
+    void* operator new(size_t size);
 
-    void operator delete(void* ptr){
-        free(ptr);
-    }
+    /**
+     * override to operator delete
+     * @param ptr
+     */
+    void operator delete(void* ptr);
 
-    void* getNextFreeLocationPtr(size_t size){
-        if(size > availableSizeOnHeap){
-            return nullptr;
-        }
-        availableSizeOnHeap -= size;
-        addressLocation = &myHeap[indexLocation];
-        indexLocation += size;
+    /**
+     *
+     * @param size
+     * @return the next free location on the pool
+     */
+    void* getNextFreeLocationPtr(size_t size);
 
-        cout << "\nallocated: " << to_string(availableSizeOnHeap) << "\n";
-
-        return addressLocation;
-    }
-
+    /**
+     * the singleton object
+     */
+    static MemPool* instance;
 
 private:
-    MemPool() {}
-    void* addressLocation;
-    size_t indexLocation;
-    size_t availableSizeOnHeap ;
+
+    /**
+     * the pool
+     */
     char* myHeap;
 
-    MemPool(size_t heapSize) {
-        availableSizeOnHeap =heapSize;
-        myHeap = (char*)malloc(heapSize);
-        indexLocation = 0;
-    }
+    /**
+     * index of the last location that allocated
+     */
+    size_t indexLocation;
 
+    /**
+     * available size on the heap
+     */
+    size_t availableSizeOnHeap;
+
+    /**
+     * ctr
+     */
+    MemPool() {}
+
+    /**
+     * ctr - called from the instance
+     * @param heapSize
+     */
+    MemPool(size_t heapSize);
 };
 
 #endif //CPPEX2_MEMPOOL_H

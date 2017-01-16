@@ -17,9 +17,6 @@ void *freeblock::getStartPtr() const {
     return startPtr;
 }
 
-void freeblock::setStartPtr(void *startPtr) {
-    freeblock::startPtr = startPtr;
-}
 
 freeblock *freeblock::getNext() const {
     return next;
@@ -44,11 +41,3 @@ void* freeblock::operator new(size_t size){
 void freeblock::operator delete(void* ptr){
     free(ptr);
 }
-
-//int freeblock::getAddressIndex() const {
-//    return addressIndex;
-//}
-//
-//void freeblock::setAddressIndex(int addressIndex) {
-//    freeblock::addressIndex = addressIndex;
-//}

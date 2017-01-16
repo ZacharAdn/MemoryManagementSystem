@@ -3,9 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cppEx2.dir/MemoryManager.cpp.o"
   "CMakeFiles/cppEx2.dir/freeblock.cpp.o"
   "CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.o"
-  "CMakeFiles/cppEx2.dir/systemTools.cpp.o"
-  "CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o"
   "CMakeFiles/cppEx2.dir/blocksLinkedList.cpp.o"
+  "CMakeFiles/cppEx2.dir/MemPool.cpp.o"
   "cppEx2.pdb"
   "cppEx2"
 )

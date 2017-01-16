@@ -123,33 +123,6 @@ cppEx2/fast:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/build
 .PHONY : cppEx2/fast
 
-AllocationStrategy.o: AllocationStrategy.cpp.o
-
-.PHONY : AllocationStrategy.o
-
-# target to build an object file
-AllocationStrategy.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.o
-.PHONY : AllocationStrategy.cpp.o
-
-AllocationStrategy.i: AllocationStrategy.cpp.i
-
-.PHONY : AllocationStrategy.i
-
-# target to preprocess a source file
-AllocationStrategy.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.i
-.PHONY : AllocationStrategy.cpp.i
-
-AllocationStrategy.s: AllocationStrategy.cpp.s
-
-.PHONY : AllocationStrategy.s
-
-# target to generate assembly for a file
-AllocationStrategy.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/AllocationStrategy.cpp.s
-.PHONY : AllocationStrategy.cpp.s
-
 FirstFitStrategy.o: FirstFitStrategy.cpp.o
 
 .PHONY : FirstFitStrategy.o
@@ -176,6 +149,33 @@ FirstFitStrategy.s: FirstFitStrategy.cpp.s
 FirstFitStrategy.cpp.s:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/FirstFitStrategy.cpp.s
 .PHONY : FirstFitStrategy.cpp.s
+
+MemPool.o: MemPool.cpp.o
+
+.PHONY : MemPool.o
+
+# target to build an object file
+MemPool.cpp.o:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemPool.cpp.o
+.PHONY : MemPool.cpp.o
+
+MemPool.i: MemPool.cpp.i
+
+.PHONY : MemPool.i
+
+# target to preprocess a source file
+MemPool.cpp.i:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemPool.cpp.i
+.PHONY : MemPool.cpp.i
+
+MemPool.s: MemPool.cpp.s
+
+.PHONY : MemPool.s
+
+# target to generate assembly for a file
+MemPool.cpp.s:
+	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/MemPool.cpp.s
+.PHONY : MemPool.cpp.s
 
 MemoryManager.o: MemoryManager.cpp.o
 
@@ -285,33 +285,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-systemTools.o: systemTools.cpp.o
-
-.PHONY : systemTools.o
-
-# target to build an object file
-systemTools.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/systemTools.cpp.o
-.PHONY : systemTools.cpp.o
-
-systemTools.i: systemTools.cpp.i
-
-.PHONY : systemTools.i
-
-# target to preprocess a source file
-systemTools.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/systemTools.cpp.i
-.PHONY : systemTools.cpp.i
-
-systemTools.s: systemTools.cpp.s
-
-.PHONY : systemTools.s
-
-# target to generate assembly for a file
-systemTools.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx2.dir/build.make CMakeFiles/cppEx2.dir/systemTools.cpp.s
-.PHONY : systemTools.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -321,12 +294,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cppEx2"
-	@echo "... AllocationStrategy.o"
-	@echo "... AllocationStrategy.i"
-	@echo "... AllocationStrategy.s"
 	@echo "... FirstFitStrategy.o"
 	@echo "... FirstFitStrategy.i"
 	@echo "... FirstFitStrategy.s"
+	@echo "... MemPool.o"
+	@echo "... MemPool.i"
+	@echo "... MemPool.s"
 	@echo "... MemoryManager.o"
 	@echo "... MemoryManager.i"
 	@echo "... MemoryManager.s"
@@ -339,9 +312,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... systemTools.o"
-	@echo "... systemTools.i"
-	@echo "... systemTools.s"
 .PHONY : help
 
 

@@ -14,14 +14,15 @@ MemoryManager *MemoryManager::instance = nullptr;
 MemoryManager::MemoryManager(size_t _heapSize, int strategyType)
         : heapSize(_heapSize) , pool(MemPool::getInstane(_heapSize)) , strategy(nullptr) {
 
-        setStrategy(strategyType);
-
+    //set approach to memoryManager
+    setStrategy(strategyType);
 }
 
 MemoryManager::MemoryManager() {}
 
 MemoryManager::~MemoryManager() {
-
+    delete pool;
+    delete strategy;
 }
 
 MemoryManager *MemoryManager::getInstane(size_t heapSize,int strategyType) {
@@ -33,14 +34,13 @@ MemoryManager *MemoryManager::getInstane(size_t heapSize,int strategyType) {
 
 
 
-void *MemoryManager::setStrategy(int strategyType) {
+void MemoryManager::setStrategy(int strategyType) {
     delete strategy;
 
     if(strategyType == FirstFit){
         strategy = new FirstFitStrategy(pool);
     }
-
-
+    // if we want to add approach
 }
 
 void *MemoryManager::myAllocate(size_t size) {
@@ -49,6 +49,10 @@ void *MemoryManager::myAllocate(size_t size) {
 
 void MemoryManager::myFree(void *ptr) {
     strategy->myFree(ptr);
+}
+
+void MemoryManager::valgrind() {
+    strategy->valgrind();
 }
 
 void *MemoryManager::operator new(size_t size){
