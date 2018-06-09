@@ -61,7 +61,7 @@ void operator delete[](void* toDelete){
 }
 
 /**
- * check for the geeric Linked List
+ * check for the generic Linked List
  */
 void LinkedListCheck() {
     CyclicGenericList <pair<char* , long*>*>* LinkedList = new CyclicGenericList <pair<char*, long*>*>();
