@@ -1,4 +1,4 @@
-#Memory Management System (Heap Memory Manager).
+# Memory Management System (Heap Memory Manager).
 
 The system manages everything related to dynamic memory allocation - requests and servecises, as an alternative to access to the operating system (Kernal) when requesting memory allocation or release.
 
